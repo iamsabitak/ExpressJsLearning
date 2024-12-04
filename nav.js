@@ -21,7 +21,7 @@ app.get("/contact", (req, res) => {
 });
 
 app.get("/temp", (req, res) => {
-  res.status(2000).send("Welcome to my temp page");
+  res.status(200).send("Welcome to my temp page");
 });
 
 app.listen(port, () => {
