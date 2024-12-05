@@ -10,11 +10,18 @@
 // Similarly, the response object represents the HTTP response
 // that the Express app sends when it receives an HTTP request.
 //nodemon filename.js to run in in the browser
-
+const path = require("path");
 const express = require("express");
 
 const app = express();
+// relative absolute
+// console.log dirname);
+// console.log(path.join(__dirname, "../public"));
 
+const staticPath = path.join(__dirname, "../public");
+
+// builtin middleware
+app.use(express.static(staticPath));
 app.get("/", (req, res) => {
   res.send("Hello world");
 });
